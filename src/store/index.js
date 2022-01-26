@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-import productModules from './modules/product';
+import productModules from './modules/products';
 import usersModule from './modules/users';
 
 const store = createStore({
@@ -8,19 +8,11 @@ const store = createStore({
     users: usersModule,
   },
   state() {
-    return {
-
-    };
+    return {};
   },
-  getters: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  },
+  getters: {},
+  mutations: {},
+  actions: {},
 });
 
 export default store;

@@ -31,9 +31,7 @@ export default {
   methods: {
     signOut() {
       this.showMenu = false;
-      this.$store.dispatch('signOut', null)
-        .then(() => this.$router.push('/products'))
-        .catch(() => { this.signInError = true; });
+      this.$store.commit('users/setUser', null);
     },
   },
 };

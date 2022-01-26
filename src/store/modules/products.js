@@ -2,6 +2,7 @@ import axios from 'axios';
 import filterProducts from '../../products/filter-products';
 
 export default {
+  namespaced: true,
   state() {
     return {
       products: [{
