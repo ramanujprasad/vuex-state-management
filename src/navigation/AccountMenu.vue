@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
   data() {
@@ -29,9 +29,10 @@ export default {
     ...mapState('users', ['user']),
   },
   methods: {
+    ...mapMutations('users', ['setUser']),
     signOut() {
       this.showMenu = false;
-      this.$store.commit('users/setUser', null);
+      this.setUser(null);
     },
   },
 };
